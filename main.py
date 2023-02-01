@@ -1,9 +1,7 @@
-from UC3MLogistics import OrderManager
 import string
 from barcode.writer import ImageWriter
 from barcode import EAN13
-
-
+from UC3MLogistics import OrderManager
 
 # GLOBAL VARIABLES
 LETTERS = string.ascii_letters + string.punctuation + string.digits
