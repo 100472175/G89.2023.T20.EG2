@@ -1,46 +1,51 @@
 from UC3MLogistics import OrderManager
 import string
-from barcode import EAN13
 from barcode.writer import ImageWriter
-
-#GLOBAL VARIABLES
-letters = string.ascii_letters + string.punctuation + string.digits
-shift = 3
+from barcode import EAN13
 
 
-def Encode(word):
+
+# GLOBAL VARIABLES
+LETTERS = string.ascii_letters + string.punctuation + string.digits
+SHIFT = 3
+
+
+def encode(word):
     encoded = ""
     for letter in word:
         if letter == ' ':
             encoded = encoded + ' '
         else:
-            x = (letters.index(letter) + shift) % len(letters)
-            encoded = encoded + letters[x]
+            enc = (LETTERS.index(letter) + SHIFT) % len(LETTERS)
+            encoded = encoded + LETTERS[enc]
     return encoded
 
-def Decode(word):
+
+def decode(word):
     encoded = ""
     for letter in word:
         if letter == ' ':
             encoded = encoded + ' '
         else:
-            x = (letters.index(letter) - shift) % len(letters)
-            encoded = encoded + letters[x]
+            enc = (LETTERS.index(letter) - SHIFT) % len(LETTERS)
+            encoded = encoded + LETTERS[enc]
     return encoded
+
 
 def main():
     mng = OrderManager()
     res = mng.ReadproductcodefromJSON("test.json")
-    strRes = res.__str__()
-    print(strRes)
-    EncodeRes = Encode(strRes)
-    print("Encoded Res "+ EncodeRes)
-    DecodeRes = Decode(EncodeRes)
-    print("Decoded Res: " + DecodeRes)
+    #str_res = res.__str__()
+    str_res = str(res)
+    print(str_res)
+    encode_res = encode(str_res)
+    print("Encoded Res " + encode_res)
+    decode_res = decode(encode_res)
+    print("Decoded Res: " + decode_res)
     print("Codew: " + res.PRODUCT_CODE)
-    with open("barcodeEan13.jpg", 'wb') as f:
-        iw = ImageWriter()
-        EAN13(res.PRODUCT_CODE, writer=iw).write(f)
+    with open("barcodeEan13.jpg", 'wb') as file:
+        image_writer = ImageWriter()
+        EAN13(res.PRODUCT_CODE, writer=image_writer).write(file)
 
 
 if __name__ == "__main__":
