@@ -1,3 +1,7 @@
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-class-docstring
+# pylint: disable=missing-function-docstring
+
 import string
 from barcode.writer import ImageWriter
 from barcode import EAN13
@@ -43,6 +47,7 @@ def main():
     print("Codew: " + res.PRODUCT_CODE)
     with open("barcodeEan13.jpg", 'wb') as file:
         image_writer = ImageWriter()
+        # res.PRODUCT_CODE = '6969694204200'
         EAN13(res.PRODUCT_CODE, writer=image_writer).write(file)
 
 

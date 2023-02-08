@@ -1,4 +1,5 @@
 # created by virtualenv automatically
 bin
 lib
+base_files
 pyvenv.cfg
