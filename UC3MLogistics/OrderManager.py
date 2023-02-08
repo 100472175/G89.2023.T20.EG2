@@ -15,12 +15,12 @@ class OrderManager:
         check_sum = 0
         for i in range(len(eAn13)-1):
             current_number = int(eAn13[i])
-            if current_number % 2 != 0:
+            if i % 2 != 0:
                 check_sum += current_number*3
             else:
                 check_sum += current_number
-        difference = 10*math.ceil(check_sum%10) - check_sum
-        return eAn13[-1] == difference
+        difference = 10*math.ceil(check_sum/10) - check_sum
+        return int(eAn13[-1]) == difference
 
     def ReadproductcodefromJSON( self, fi ):
 
