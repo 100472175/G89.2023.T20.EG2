@@ -47,6 +47,7 @@ def main():
     print("Codew: " + res.PRODUCT_CODE)
     with open("barcodeEan13.jpg", 'wb') as file:
         image_writer = ImageWriter()
+        # res.PRODUCT_CODE = '6969694204200'
         EAN13(res.PRODUCT_CODE, writer=image_writer).write(file)
 
 
