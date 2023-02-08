@@ -2,22 +2,23 @@ import json
 from .OrderMangementException import OrderManagementException
 from .OrderRequest import OrderRequest
 
-"Used to get the nearest number to the sum of the 12 elements of the barcode with .ceil"
+#Used to get the nearest number to the sum of the 12 elements of the barcode with .ceil
 import math
 
 class OrderManager:
     def __init__(self):
         pass
 
-    def ValidateEAN13( self, eAn13 ):
+    def ValidateEAN13( self, eAn13):
         # PLEASE INCLUDE HERE THE CODE FOR VALIDATING THE GUID
         # RETURN TRUE IF THE GUID IS RIGHT, OR FALSE IN OTHER CASE
         check_sum = 0
         for i in range(len(eAn13)-1):
-            if eAn13[i] % 2 != 0:
-                check_sum += eAn13[i]*3
+            current_number = int(eAn13[i])
+            if current_number % 2 != 0:
+                check_sum += current_number*3
             else:
-                check_sum += eAn13[i]
+                check_sum += current_number
         difference = 10*math.ceil(check_sum%10) - check_sum
         return eAn13[-1] == difference
 
