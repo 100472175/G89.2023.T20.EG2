@@ -3,3 +3,4 @@ bin
 lib
 base_files
 pyvenv.cfg
+.idea/pylint.xml
