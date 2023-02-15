@@ -1,3 +1,7 @@
+[MASTER]
+required-header=Name of the file\n@Author: .*\n@version: .*\n@Date: .*\n@Creation : .*\nInstructions: .*
+load-plugins=pylint.checkers.imports
+
 [MAIN]
 
 # Always return a 0 (non-error) status code, even if lint errors are found.
@@ -113,6 +117,9 @@ max-line-length=80
 
 
 [IMPORTS]
+
+# Alphabetical order for imports
+import-order-style=smarkets
 
 # List of modules that can be imported at any level, not just the top level
 # one.
