@@ -1,6 +1,6 @@
 [MASTER]
-required-header=Name of the file\n@Author: .*\n@version: .*\n@Date: .*\n@Creation : .*\nInstructions: .*
-load-plugins=pylint.checkers.imports
+#required-header=Name of the file\n@Author: .*\n@version: .*\n@Date: .*\n@Creation : .*\nInstructions: .*
+#load-plugins=pylint.checkers.imports
 
 [MAIN]
 
