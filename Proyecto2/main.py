@@ -1,7 +1,3 @@
-# pylint: disable=missing-module-docstring
-# pylint: disable=missing-class-docstring
-# pylint: disable=missing-function-docstring
-
 from UC3MLogistics import OrderManager
 import string
 from barcode import EAN13
@@ -42,7 +38,7 @@ def main():
     DecodeRes = Decode(EncodeRes)
     print("Decoded Res: " + DecodeRes)
     print("Codew: " + res.PRODUCT_CODE)
-    with open("barcodeEan13.jpg", 'wb') as f:
+    with open("./barcodeEan13.jpg", 'wb') as f:
         iw = ImageWriter()
         EAN13(res.PRODUCT_CODE, writer=iw).write(f)
 
