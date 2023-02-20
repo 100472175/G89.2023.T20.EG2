@@ -7,3 +7,6 @@ pyvenv.cfg
 \bin
 \lib
 /lib
+../lib
+../base_files
+../bin
