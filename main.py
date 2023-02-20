@@ -38,10 +38,14 @@ def main():
     DecodeRes = Decode(EncodeRes)
     print("Decoded Res: " + DecodeRes)
     print("Codew: " + res.PRODUCT_CODE)
-    with open("./barcodeEan13.jpg", 'wb') as f:
+    with open("barcodeEan13.jpg", 'wb') as f:
         iw = ImageWriter()
         EAN13(res.PRODUCT_CODE, writer=iw).write(f)
 
 
 if __name__ == "__main__":
     main()
+
+xay = 0
+xay += 1
+print(xay)
