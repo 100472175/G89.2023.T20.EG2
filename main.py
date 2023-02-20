@@ -45,7 +45,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-xay = 0
-xay += 1
-print(xay)
