@@ -4,8 +4,8 @@ import json
 # pylint: disable=unused-variable
 # Used to remove the warning of the unused variable, which is the name of the class
 import math
-from OrderMangementException import OrderManagementException
-from OrderRequest import OrderRequest
+from UC3MLogistics.OrderManagementException import OrderManagementException
+from UC3MLogistics.OrderRequest import OrderRequest
 
 
 class OrderManager:
