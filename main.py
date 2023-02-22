@@ -58,10 +58,10 @@ def Main():
     print("Encoded Res "+ EncodeRes)
     DecodeRes = Decode(EncodeRes)
     print("Decoded Res: " + DecodeRes)
-    print("Codew: " + Res.PRODUCT_CODE)
+    print("Codew: " + Res.product_code)
     with open("barcodeEan13.jpg", 'wb') as Stored:
         Imagew = ImageWriter()
-        EAN13(Res.PRODUCT_CODE, writer=Imagew).write(Stored)
+        EAN13(Res.product_code, writer=Imagew).write(Stored)
 
 
 if __name__ == "__main__":
