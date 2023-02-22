@@ -108,7 +108,7 @@ unsafe-load-any-extension=no
 [BASIC]
 
 # Naming style matching correct argument names.
-argument-naming-style=PascalCase
+argument-naming-style=any
 
 # Regular expression matching correct argument names. Overrides argument-
 # naming-style. If left empty, argument names will be checked with the set
@@ -325,7 +325,7 @@ indent-after-paren=4
 indent-string="    "
 
 # Maximum number of characters on a single line.
-max-line-length=80
+max-line-length=120
 
 # Maximum number of lines in a module.
 max-module-lines=1000
