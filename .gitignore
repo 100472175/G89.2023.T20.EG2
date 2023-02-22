@@ -10,3 +10,4 @@ pyvenv.cfg
 ../lib
 ../base_files
 ../bin
+.idea
