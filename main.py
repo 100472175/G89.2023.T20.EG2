@@ -2,6 +2,8 @@
 Author: UC3M
 MODIFIED BY TEAM 20 (Eduardo Alarcón and Sergio Barragán)
 """
+# pylint: disable=import-error
+# This one is added to avoid the warning of the import error, which is the import of UC3MLogistics
 import string
 from barcode import EAN13
 from barcode.writer import ImageWriter
@@ -48,7 +50,7 @@ def Main():
     :return:
     """
     Mng = OrderManager()
-    Res = Mng.ReadproductcodefromJSON("test.json")
+    Res = Mng.read_product_code_from_json("test.json")
     StrRes = str(Res)
     #StrRes = Res.__str__()
     print(StrRes)
